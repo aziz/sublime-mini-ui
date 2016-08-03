@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sublime Mini UI</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="ui.css">
+  <style type="text/css">
+    html {
+      --font-size       : 16px;
+      --background      : #00161B;
+      --foreground      : #F8F8F8;
+      --redish          : #D8290D;
+      --orangish        : #FFA826;
+      --yellowish       : #F6F080;
+      --greenish        : #9DF39F;
+      --bluish          : #4DD2FF;
+      --purplish        : #AE81FF;
+      --pinkish         : #FF3A83;
+      --header-bg       : #AEB4B6;
+      --section-bg      : #4A5A5D;
+      --panel-header-bg : #4A5A5D;
+      --panel-body-bg   : #AEB4B6;
+      --btn-bg          : #7C878A;
+    }
+    #previewBox {
+      width: 480px;
+      border: 1px solid rgba(255, 255, 255, .5);
+      margin: 50px;
+    }
+  </style>
+</head>
+<body>
+<div id="previewBox"></div>
+<script type="text/javascript">
+  $.get("/html/ui.html", function(data) {
+    $("#previewBox").html(data);
+  });
+</script>
+</body>
+</html>

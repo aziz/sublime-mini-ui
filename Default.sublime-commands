@@ -1,0 +1,4 @@
+[
+ { "caption" : "sandbox: html popup", "command": "html_ui" },
+ { "caption" : "sandbox: phantom", "command": "my_phantom" }
+]
