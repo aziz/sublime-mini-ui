@@ -2,6 +2,9 @@
 
 - Adapting the current active color scheme.
 
+![Sublime minihtml UI Library Screenshot](https://cloud.githubusercontent.com/assets/3202/17423146/dec97104-5ab8-11e6-859d-c3bec8664fab.png)
+
+
 ## Challenges
 
 ### Icons
