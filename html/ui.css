@@ -1,10 +1,14 @@
 html {
-  --selection-color: var(--bluish);
+  --selection-color: color(var(--background) blend(var(--bluish) 30%));
   --header-bg: color(var(--foreground) blend(var(--background) 70%));
   --section-bg: color(var(--background) blend(var(--foreground) 70%));
   --panel-header-bg: color(var(--background) blend(var(--foreground) 70%));
   --panel-body-bg: color(var(--background) blend(var(--foreground) 30%));
   --btn-bg: color(var(--background) blend(var(--foreground) 50%));
+  --btn-redish: color(var(--background) blend(var(--redish) 30%));
+  --btn-orangish: color(var(--background) blend(var(--orangish) 30%));
+  --btn-bluish: color(var(--background) blend(var(--bluish) 30%));
+  --btn-greenish: color(var(--background) blend(var(--greenish) 30%));
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-mono: "sf mono", "Liberation Mono", Menlo, Courier, monospace;
   --font-size: 16px;
@@ -49,9 +53,46 @@ hr {
   display: block;
   background-color: var(--section-bg);
   padding-top: 2px;
-  margin: 1rem 1rem;
+  margin: 1rem 0;
 }
 
+.fg-background { color: var(--background); }
+.fg-foreground { color: var(--foreground); }
+.fg-redish     { color: var(--redish);     }
+.fg-orangish   { color: var(--orangish);   }
+.fg-yellowish  { color: var(--yellowish);  }
+.fg-greenish   { color: var(--greenish);   }
+.fg-bluish     { color: var(--bluish);     }
+.fg-purplish   { color: var(--purplish);   }
+.fg-pinkish    { color: var(--pinkish);    }
+
+.bg-background { background-color: var(--background); }
+.bg-foreground { background-color: var(--foreground); }
+.bg-redish     { background-color: var(--redish);     }
+.bg-orangish   { background-color: var(--orangish);   }
+.bg-yellowish  { background-color: var(--yellowish);  }
+.bg-greenish   { background-color: var(--greenish);   }
+.bg-bluish     { background-color: var(--bluish);     }
+.bg-purplish   { background-color: var(--purplish);   }
+.bg-pinkish    { background-color: var(--pinkish);    }
+
+.content {
+ padding: var(--content-padding);
+}
+
+.header {
+  font-size: 1.25rem;
+  background-color: var(--header-bg);
+  color: var(--background);
+  padding: var(--content-padding);
+}
+
+.section {
+  font-size: 1.1rem;
+  font-weight: 400;
+  background-color: var(--section-bg);
+  padding: var(--section-padding);
+}
 
 .box {
   font-family: var(--font-mono);
@@ -89,7 +130,7 @@ hr {
 }
 
 .tr {
-  line-height: 42px;
+  line-height: 28px;
 }
 
 .th .tdc {
@@ -113,54 +154,6 @@ hr {
   padding: 0 12px;
 }
 
-.fg-background { color: var(--background); }
-.fg-foreground { color: var(--foreground); }
-.fg-redish     { color: var(--redish);     }
-.fg-orangish   { color: var(--orangish);   }
-.fg-yellowish  { color: var(--yellowish);  }
-.fg-greenish   { color: var(--greenish);   }
-.fg-bluish     { color: var(--bluish);     }
-.fg-purplish   { color: var(--purplish);   }
-.fg-pinkish    { color: var(--pinkish);    }
-
-.bg-background { background-color: var(--background); }
-.bg-foreground { background-color: var(--foreground); }
-.bg-redish     { background-color: var(--redish);     }
-.bg-orangish   { background-color: var(--orangish);   }
-.bg-yellowish  { background-color: var(--yellowish);  }
-.bg-greenish   { background-color: var(--greenish);   }
-.bg-bluish     { background-color: var(--bluish);     }
-.bg-purplish   { background-color: var(--purplish);   }
-.bg-pinkish    { background-color: var(--pinkish);    }
-
-.icon {
-  font-family: "material icons";
-  position: relative;
-  top: 0.125rem;
-}
-
-.icon-24px {
-  font-size: 24px;
-}
-
-.content {
- padding: var(--content-padding);
-}
-
-.header {
-  font-size: 1.25rem;
-  background-color: var(--header-bg);
-  color: var(--background);
-  padding: var(--content-padding);
-}
-
-.section {
-  font-size: 1.1rem;
-  font-weight: 400;
-  background-color: var(--section-bg);
-  padding: var(--section-padding);
-}
-
 .label {
   border-radius: 3px;
   padding: 2px 4px;
@@ -172,11 +165,13 @@ hr {
 .label-large {
   font-size: 1.5rem;
   padding: 2px 8px;
+  border-radius: 5px;
 }
 
 .label-small {
   font-size: 0.8rem;
   padding: 2px 2px;
+  border-radius: 2px;
 }
 
 .label-success {
@@ -232,8 +227,33 @@ hr {
   color: var(--foreground);
   text-decoration: none;
   border-radius: 3px;
-  padding: 4px 20px;
+  padding: 4px 1rem;
   font-family: var(--font);
+}
+
+.btn-large {
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+.btn-small {
+  font-size: 0.8rem;
+  padding: 2px 0.8rem;
+}
+
+.btn-success {
+  background-color: var(--btn-greenish);
+}
+
+.btn-error {
+  background-color: var(--btn-redish);
+}
+
+.btn-warning {
+  background-color: var(--btn-orangish);
+}
+
+.btn-info {
+  background-color: var(--btn-bluish);
 }
 
 .btn-group {
@@ -256,9 +276,19 @@ hr {
   border-bottom-right-radius: 3px;
 }
 
-.btn-group .btn-selected {
+.btn-group .btn-group-spacer {
+  padding-right: 1px;
+
+}
+
+.btn-selected {
   background-color: var(--selection-color);
-  color: var(--foreground);
+  color: var(--background);
+}
+
+.btn-primary {
+  background-color: var(--selection-color);
+  color: var(--background);
 }
 
 .no-bullets {
@@ -279,7 +309,7 @@ hr {
 .list-item {
   display: block;
   margin: 0;
-  padding: 0.25rem 0.5rem;
+  padding: 0.25rem 1rem;
 }
 
 .list-item a {
@@ -289,7 +319,7 @@ hr {
 
 .list-group .selected {
   background-color: var(--selection-color);
-  color: var(--foreground);
+  color: var(--background);
 }
 
 .panel {
