@@ -342,3 +342,35 @@ hr {
   color: var(--background);
   padding: var(--content-padding);
 }
+
+.panel-success .panel-header {
+  background-color: color(var(--background) blend(var(--greenish) 70%));
+}
+
+.panel-success .panel-body {
+  background-color: color(var(--background) blend(var(--greenish) 30%));
+}
+
+.panel-warning .panel-header {
+  background-color: color(var(--background) blend(var(--orangish) 70%));
+}
+
+.panel-warning .panel-body {
+  background-color: color(var(--background) blend(var(--orangish) 30%));
+}
+
+.panel-error .panel-header {
+  background-color: color(var(--background) blend(var(--redish) 70%));
+}
+
+.panel-error .panel-body {
+  background-color: color(var(--background) blend(var(--redish) 30%));
+}
+
+.panel-info .panel-header {
+  background-color: color(var(--background) blend(var(--bluish) 70%));
+}
+
+.panel-info .panel-body {
+  background-color: color(var(--background) blend(var(--bluish) 30%));
+}
