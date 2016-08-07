@@ -9,7 +9,7 @@ html {
   --btn-orangish: color(var(--background) blend(var(--orangish) 30%));
   --btn-bluish: color(var(--background) blend(var(--bluish) 30%));
   --btn-greenish: color(var(--background) blend(var(--greenish) 30%));
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --font-mono: "sf mono", "Liberation Mono", Menlo, Courier, monospace;
   --font-size: 16px;
   --content-padding: 0.5rem 1rem;
@@ -125,12 +125,17 @@ hr {
   line-height: 24px;
 }
 
+.rounded-box .box {border-radius: 1000px;}
+.rounded-box .box-wrapper {border-radius: 1000px;}
+.rounded-box .box-wrapper1 {border-radius: 1000px;}
+.rounded-box .box-wrapper2 {border-radius: 1000px;}
+
 .box-spacer {
   padding-right: 4px;
 }
 
 .tr {
-  line-height: 28px;
+  line-height: 2rem;
 }
 
 .th .tdc {
@@ -143,6 +148,10 @@ hr {
   padding-bottom: 1px;
   padding-top: 1px;
   font-family: var(--font-mono);
+}
+
+.table-hlines .td {
+  padding-right: 0px;
 }
 
 .td-first {

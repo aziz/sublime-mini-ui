@@ -21,4 +21,3 @@ class MyPhantomCommand(sublime_plugin.TextCommand):
         # LAYOUT_BLOCK
         self.view.add_phantom("test", self.view.sel()[0], html, sublime.LAYOUT_INLINE)
     # view.erase_phantoms("test")
-
