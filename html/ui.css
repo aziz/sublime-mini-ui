@@ -165,7 +165,7 @@ hr {
 
 .label {
   border-radius: 3px;
-  padding: 2px 4px;
+  padding: 2px 6px;
   font-size: 1rem;
   color: var(--background);
   background-color: var(--foreground);
@@ -173,13 +173,13 @@ hr {
 
 .label-large {
   font-size: 1.5rem;
-  padding: 2px 8px;
+  padding: 2px 12px;
   border-radius: 5px;
 }
 
 .label-small {
   font-size: 0.8rem;
-  padding: 2px 2px;
+  padding: 2px 5px;
   border-radius: 2px;
 }
 
