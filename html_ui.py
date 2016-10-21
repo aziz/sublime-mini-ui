@@ -15,9 +15,18 @@ class HtmlUiCommand(sublime_plugin.TextCommand):
 
 class MyPhantomCommand(sublime_plugin.TextCommand):
     def run(self, edit):
-        html = sublime.load_resource("Packages/sandbox/html/phantom.html")
+        # html = sublime.load_resource("Packages/sandbox/html/phantom.html")
+        css = sublime.load_resource("Packages/sandbox/html/ui.css")
+        html = sublime.load_resource("Packages/sandbox/html/ui.html").format(css=css)
+        v = self.view.window().new_file()
+        v.settings().set('gutter', False)
+        v.settings().set('margin', 0)
+        v.set_read_only(True)
+        v.set_scratch(True)
+        sel = v.sel()
+        sel.clear()
         # LAYOUT_INLINE
         # LAYOUT_BELOW
         # LAYOUT_BLOCK
-        self.view.add_phantom("test", self.view.sel()[0], html, sublime.LAYOUT_INLINE)
+        v.add_phantom("test", self.view.sel()[0], html, sublime.LAYOUT_INLINE)
     # view.erase_phantoms("test")
